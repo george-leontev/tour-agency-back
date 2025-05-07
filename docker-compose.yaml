@@ -1,0 +1,11 @@
+services:
+  tour-agency-database:
+    container_name: tour-agency-database
+    build:
+      dockerfile: Dockerfile.database
+      context: .
+    environment:
+      - POSTGRES_PASSWORD=12345678900
+      - POSTGRES_USER=postgres
+    ports:
+      - 55432:5432

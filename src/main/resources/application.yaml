@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: tour_agency
+  jpa:
+    database: postgresql
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        format_sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:55432/tour_agency
+    username: postgres
+    password: 12345678900
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:55432/tour_agency
+    user: postgres
+    password: 12345678900
+    clean-disabled: false
+    schemas: public, business

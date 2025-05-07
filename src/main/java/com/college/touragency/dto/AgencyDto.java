@@ -1,0 +1,19 @@
+package com.college.touragency.dto;
+
+import com.college.touragency.models.Agency;
+
+public record AgencyDto(
+        Integer id,
+        String name,
+        Integer starsCount,
+        Integer countryCount
+) {
+    public static AgencyDto fromEntity(Agency agency) {
+        return new AgencyDto(
+                agency.getId(),
+                agency.getName(),
+                agency.getStarsCount(),
+                agency.getCountryCount()
+        );
+    }
+}
