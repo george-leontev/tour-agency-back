@@ -21,6 +21,12 @@ public class Excursion {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "location", nullable = false)
+    private String location;
+
+    @Column(name = "description", nullable = false)
+    private String description;
+
     @Column(name = "price", nullable = false)
     private int price;
 

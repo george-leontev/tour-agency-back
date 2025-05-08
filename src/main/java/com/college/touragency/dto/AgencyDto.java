@@ -16,4 +16,13 @@ public record AgencyDto(
                 agency.getCountryCount()
         );
     }
+
+    public Agency toEntity() {
+        Agency agency = new Agency();
+        agency.setName(name);
+        agency.setStarsCount(starsCount);
+        agency.setCountryCount(countryCount);
+
+        return agency;
+    }
 }
